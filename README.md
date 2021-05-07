@@ -13,5 +13,8 @@ The return was then calculated by determining the percent change of the starting
 ![original_script2017](https://user-images.githubusercontent.com/83552696/117517502-0d94cf00-af51-11eb-94ab-19989c7cdb68.PNG)
 ![original_script2018](https://user-images.githubusercontent.com/83552696/117517507-0ec5fc00-af51-11eb-8648-496a8fa67e84.PNG)
 
-The information is all readily available, but not in an easily read format.
+The information is all readily available, but not in an easily read format. I created a different macro to convert the returns to percentages and added color for quick extraction of a percent increase or decrease. Instead of having to run several macros to make this analysis more user friendly, I refractored the script.
+
+### Refactored macro
+Since nested loops can get complicated, I utilized a new variable called the tickerIndex. 
 
