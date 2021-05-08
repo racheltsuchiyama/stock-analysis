@@ -16,15 +16,19 @@ The return was then calculated by determining the percent change of the starting
 The information is all readily available, but not in an easily read format. I created a different macro to convert the returns to percentages and added color for quick extraction of a percent increase or decrease. Instead of having to run several macros to make this analysis more user friendly, I refractored the script.
 
 ### Refactored macro
-Since nested loops can get complicated, I utilized a new variable called the tickerIndex. Instead of iterating through all the tickers and finding the total volumes and returns, I made arrays to hold the forementioned values for each ticker. The new code uses the tickerIndex to find the trade volume and returns for each stock, but differs from the original code by storing these values in an array. The tickerIndex was initially set to zero, but increases by one at the end of the loop.
+Since nested loops can get complicated, I utilized a new variable called the tickerIndex. Instead of iterating through all the tickers and all the rows to find the total volumes and returns, I made arrays to hold the forementioned values for each ticker. The new code uses the tickerIndex to find the trade volume and returns for each stock, and stores these values in the arrays. The tickerIndex was initially set to zero, but increases by one at the end of the loop.
 
 ![refactored](https://user-images.githubusercontent.com/83552696/117555300-e1418700-b012-11eb-900a-a8fb9cc7731d.png)
 
-Then, he refactored code formats the values and adds color to represent the positive or negative values of the return. While this code performs more functions than the original code, it has a longer run time as displaye below.
+Then, he refactored code formats the values and adds color to represent the positive or negative values of the return.
+
+![formatted](https://user-images.githubusercontent.com/83552696/117555782-edc7de80-b016-11eb-8cab-6e15544fe928.PNG)
+
+While this code performs more functions than the original code, it has a longer run time as displaye below.
 
 ![VBA_Challenge_2017](https://user-images.githubusercontent.com/83552696/117525311-72165500-af76-11eb-96b8-5bbb5020aae2.PNG)
 ![VBA_Challenge_2018](https://user-images.githubusercontent.com/83552696/117525314-7478af00-af76-11eb-9136-c829473d3100.PNG)
 
 ## Summary
-The original code has a slight advantage in run time in comparison to the refactored code. However, this advantage could be void due to the increased functions of the refactored code. The refactored code adds commas to the daily total volume and converts the return values to percentages. It also changes the cell color to green for a positive percentage increase and to red for a negative percentage decrease. These factors make the slight increase in run time insignificant for the refacotred code. While the original code runs faster than the refactored code, the addition functions of the refactored code make it more useful to my analysis.
+The original code has a slight advantage in run time in comparison to the refactored code. However, this advantage could be void due to the increased functions of the refactored code. The refactored code adds commas to the daily total volume and converts the return values to percentages. It also changes the cell color to green for a positive percentage increase and to red for a negative percentage decrease. These factors make the slight increase in run time insignificant for the refacotred code.
 
