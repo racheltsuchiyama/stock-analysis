@@ -30,5 +30,7 @@ While this code performs more functions than the original code, it has a longer 
 ![VBA_Challenge_2018](https://user-images.githubusercontent.com/83552696/117525314-7478af00-af76-11eb-9136-c829473d3100.PNG)
 
 ## Summary
+In general, refactoring code can have many advantages. It is a helpful way to clean up your code and make it more efficient.
+
 The original code has a slight advantage in run time in comparison to the refactored code. However, this advantage could be void due to the increased functions of the refactored code. The refactored code adds commas to the daily total volume and converts the return values to percentages. It also changes the cell color to green for a positive percentage increase and to red for a negative percentage decrease. These factors make the slight increase in run time insignificant for the refacotred code.
 
