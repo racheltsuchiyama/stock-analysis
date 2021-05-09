@@ -1,6 +1,6 @@
 # stock-analysis
 
-In order to make informed decisions for trading stocks, I created a macro in VBA to find the number of trades and returns for each stock. The number of trades per day, or the total daily volume, helps us gauge the accuracy of the stock price. The actual value of the stock converges with the stock price as the frequency of trades increases. The returns represent the percentage increase or decrease of the price at the end of the year compared to the beginning of the year. With these two values, we can wisely choose which stocks to invest in.
+In order to make informed decisions for trading stocks, I created a macro in VBA to find the number of trades and returns for each stock. The number of trades per day, or the total daily volume, helps us gauge the accuracy of the stock price. The actual value of the stock converges with the stock price as the frequency of trades increases. The returns represent the percentage increase or decrease of the price at the end of the year compared to the beginning of the year. With these two values, we can wisely choose which stocks to invest in. I created two different macros, an original and a refactored version of the original, to perform this analysis.
 
 ## Results of all stocks analysis
 ### Original macro
@@ -20,7 +20,7 @@ Since nested loops can get complicated, I utilized a new variable called the tic
 
 ![refactored](https://user-images.githubusercontent.com/83552696/117555300-e1418700-b012-11eb-900a-a8fb9cc7731d.png)
 
-Then, he refactored code formats the values and adds color to represent the positive or negative values of the return.
+Then, he refactored code adds commas to the total daily volumes, converts the returns to percentages, and adds color to represent a positive or negative return.
 
 ![formatted](https://user-images.githubusercontent.com/83552696/117555782-edc7de80-b016-11eb-8cab-6e15544fe928.PNG)
 
@@ -30,7 +30,6 @@ While this code performs more functions than the original code, it has a longer 
 ![VBA_Challenge_2018](https://user-images.githubusercontent.com/83552696/117525314-7478af00-af76-11eb-9136-c829473d3100.PNG)
 
 ## Summary
-In general, refactoring code can have many advantages. It is a helpful way to clean up your code and make it more efficient.
+In general, refactored code can have many advantages. First attempts at code tend to be more cumbersome and inefficient. For example, nested loops can take a lot of processing power and time to run. Therefore, refactoring the code such that there is only one for loop should decrease the run time of the code. The original code is helpful in determining the general outline and logic the code should follow. Then, refactoring the code can make it easier to follow, more time and memory efficient, and have an improved structure and logic. However, when refactoring code there is always the possibility of adding errors to previously working code. Also, trying to make the code more efficient does not always end in success as discussed below.
 
-The original code has a slight advantage in run time in comparison to the refactored code. However, this advantage could be void due to the increased functions of the refactored code. The refactored code adds commas to the daily total volume and converts the return values to percentages. It also changes the cell color to green for a positive percentage increase and to red for a negative percentage decrease. These factors make the slight increase in run time insignificant for the refacotred code.
-
+The original code has a slight advantage in run time in comparison to the refactored code despite the use of just one for loop in the refactored code. While the refactored code performs additional formatting functions not included in the original code, the formatting does not contribute to the increased run time. I commented out the formatting code and found no change to the run time of the refactored code. Therefore, my attempt to decrease the run time was unsuccessful and actually ended up doubling it.
